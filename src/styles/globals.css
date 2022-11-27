@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Swiper Pagination Headline */
+.swiper-pagination {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.swiper-pagination-bullet {
+  padding: 5px;
+  border-radius: 0;
+  width: auto;
+  height: 30px;
+}
+.swiper-pagination-bullet-active {
+  color: #443737 !important;
+  background: #fff !important;
+}
