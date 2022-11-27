@@ -48,7 +48,13 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.BASE_PATH}/api/data`);
+  const res = await fetch(
+    `${
+      process.env.NODE_ENV === 'local'
+        ? 'http://localhost:3000/'
+        : 'https://slicing-sportstars.vercel.app/'
+    }api/data`
+  );
   const data = await res.json();
 
   return { props: { data } };
